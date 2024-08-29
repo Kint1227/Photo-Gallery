@@ -1,0 +1,47 @@
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1600px;
+  padding: 50px 20px;
+  margin: 0 auto;
+}
+
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 20px;
+}
+
+.galleryImg {
+  max-width: 100%;
+  border: 10px;
+  position: relative;
+  transition: transform 250ms;
+  cursor: pointer;
+}
+
+.galleryImg:hover {
+  transform: translate(-2px);
+  box-shadow: 3px 3px 10px rgb(235, 60, 60);
+}
+
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(144, 85, 161, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transfoem: translateY(-100%); */
+  transition: 250ms transform;
+  padding: 50px;
+}
+
+#selectedImage {
+  max-height: 100%;
+}
